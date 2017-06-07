@@ -99,6 +99,7 @@ function _build()
     (
         cd "${OUTPUT_DIR}" || exit 1
         if zip -1 -qr "${zip_file}" ./*; then
+            echo "[OK] ${zip_file} generated"
         else
             echo "[ERROR] ${zip_file} generation failed"
             exit 1
